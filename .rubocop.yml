@@ -1,0 +1,11 @@
+plugins:
+  - rubocop-performance
+
+AllCops:
+  Exclude:
+    - config/**/*
+    - Gemfile
+    - Gemfile.lock
+    - config.ru
+    - Rakefile
+  NewCops: enable
