@@ -8,4 +8,8 @@ Rage.routes.draw do
     name = env['QUERY_STRING'].split('=').last || 'Stranger'
     [200, {}, "Hello, #{name}!"]
   }
+
+  resources :countries, only: [:index]
+
+  mount Rage.openapi.application, at: "/publicapi"
 end

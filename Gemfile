@@ -9,8 +9,13 @@ gem "rage-rb", "~> 1.16"
 # Get 50% to 150% boost when parsing JSON.
 # Rage will automatically use FastJsonparser if it is available.
 gem "fast_jsonparser"
+gem 'typhoeus', '~> 1.4', '>= 1.4.1'
 
 group :development, :test do
+  gem 'pry-byebug', '~> 3.11'
+end
+
+group :test do
   gem 'rspec', '~> 3.13', '>= 3.13.1'
 end
 

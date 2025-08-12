@@ -8,4 +8,6 @@ AllCops:
     - Gemfile.lock
     - config.ru
     - Rakefile
+    - spec/**/*
+    - bin/*
   NewCops: enable
