@@ -13,6 +13,7 @@ gem 'typhoeus', '~> 1.4', '>= 1.4.1'
 
 group :development, :test do
   gem 'pry-byebug', '~> 3.11'
+  gem 'bundler-audit', '~> 0.9.2'
 end
 
 group :test do
