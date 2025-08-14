@@ -15,6 +15,7 @@
 
 
 Dir[File.join(__dir__, '..', 'app', 'services', '**', '*.rb')].each { |file| require file }
+Dir[File.join(__dir__, '..', 'app', 'adapters', '**', '*.rb')].each { |file| require file }
 Dir[File.join(__dir__, '..', 'app', 'dto', '**', '*.rb')].each { |file| require file }
 require "rage/rspec"
 

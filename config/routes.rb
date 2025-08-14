@@ -10,6 +10,10 @@ Rage.routes.draw do
   }
 
   resources :countries, only: [:index]
+  resources :airports, only: [:index]
+  resources :destinations, only: [:index]
+  resources :schedules, only: [:index]
+  resources :flights, only: [:index]
 
   mount Rage.openapi.application, at: "/publicapi"
 end
