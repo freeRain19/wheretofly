@@ -12,9 +12,13 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+module RequestSpecHelper
+  def json_response
+    @json_response ||= JSON.parse(response.body)
+  end
+end
 
-
-Dir[File.join(__dir__, '..', 'app', 'services', '**', '*.rb')].each { |file| require file }
+# Dir[File.join(__dir__, '..', 'app', 'services', '**', '*.rb')].each { |file| require file }
 Dir[File.join(__dir__, '..', 'app', 'adapters', '**', '*.rb')].each { |file| require file }
 Dir[File.join(__dir__, '..', 'app', 'dto', '**', '*.rb')].each { |file| require file }
 require "rage/rspec"
@@ -101,4 +105,5 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+  config.include RequestSpecHelper, type: :request
 end

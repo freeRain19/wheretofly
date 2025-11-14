@@ -2,7 +2,7 @@
 
 module Ryanair
   # Fetches airport data from Ryanair API
-  class Airport < Base
+  class Airport < BaseFetcher
     def self.call(lang = 'en')
       get("https://www.ryanair.com/api/views/locate/5/airports/#{lang}/active")
     end

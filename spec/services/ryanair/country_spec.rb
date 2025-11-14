@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'spec_helper'
 
-RSpec.describe Fetcher::Country do
+RSpec.describe Ryanair::Country do
   let(:fetcher) { described_class.new }
 
   describe '#call' do

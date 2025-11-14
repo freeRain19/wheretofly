@@ -2,7 +2,7 @@
 
 module Ryanair
   # Base class for all fetchers
-  class Base
+  class BaseFetcher
     def initialize
       raise NotImplementedError, "#{self.class} is an singleton class and cannot be instantiated."
     end

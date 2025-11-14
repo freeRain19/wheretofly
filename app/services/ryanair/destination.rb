@@ -2,7 +2,7 @@
 
 module Ryanair
   # Fetches destination data for a specific airport from Ryanair API
-  class Destination < Base
+  class Destination < BaseFetcher
     def self.call(code, lang = 'en')
       get("https://www.ryanair.com/api/views/locate/searchWidget/routes/#{lang}/airport/#{code}")
     end

@@ -10,8 +10,7 @@ class SchedulesController < ApplicationController
 
     render json: @schedules, status: :ok
   rescue ParameterMissingError => e
-    puts e.message
-    render json: { error: e.message }, status: :bad_request
+    render json: { errors: e.message }, status: :bad_request
   end
 
   private
