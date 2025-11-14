@@ -14,7 +14,7 @@
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 module RequestSpecHelper
   def json_response
-    @json_response ||= JSON.parse(response.body)
+    @json_response ||= FastJsonParser.parse(response.body)
   end
 end
 

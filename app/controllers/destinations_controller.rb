@@ -5,7 +5,6 @@ class DestinationsController < ApplicationController
   # @param <String> code
   # @response Array<Dto::Country>
   def index
-    # binding.pry
     @destinations = Ryanair::Destination.call(params.fetch(:code).upcase)
 
     render json: @destinations, status: :ok

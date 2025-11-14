@@ -25,8 +25,8 @@ RSpec.describe SchedulesController, type: :request do
 
       it 'returns an array of countries' do
         expect(json_response).to be_an_instance_of(Array)
-        expect(JSON.parse(response.body).first['code']).to eq('IE')
-        expect(JSON.parse(response.body).first['name']).to eq('Ireland')
+        expect(json_response.first[:code]).to eq('IE')
+        expect(json_response.first[:name]).to eq('Ireland')
       end
     end
 
@@ -38,7 +38,7 @@ RSpec.describe SchedulesController, type: :request do
       end
 
       it 'returns an error message' do
-        expect(json_response).to include('errors' => 'Parameter code is required')
+        expect(json_response).to include(errors: 'Parameter code is required')
       end
     end
   end
