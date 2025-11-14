@@ -15,10 +15,7 @@ jobs:
           ruby-version: '3.3.2'
           bundler-cache: true
 
-      - name: Step 3. Install dependencies
-        run: bundle install
-
-      - name: Step 4 -Run RSpec Tests
+      - name: Step 3 -Run RSpec Tests
         run: bundle exec rspec
 
   lint:
@@ -34,8 +31,5 @@ jobs:
           ruby-version: '3.3.2'
           bundler-cache: true
 
-      - name: Step 3. Install dependencies
-        run: bundle install
-
-      - name: Step 4 -Run Rubocop
+      - name: Step 3 -Run Rubocop
         run: bundle exec rubocop
