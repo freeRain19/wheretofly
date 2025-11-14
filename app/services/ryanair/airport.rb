@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module Fetchers
+module Ryanair
   # Fetches airport data from Ryanair API
-  class Airport < BaseFetcher
+  class Airport < Base
     def self.call(lang = 'en')
       get("https://www.ryanair.com/api/views/locate/5/airports/#{lang}/active")
     end

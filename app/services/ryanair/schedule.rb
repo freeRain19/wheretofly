@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module Fetchers
+module Ryanair
   # Fetches schedule data for a specific airport from Ryanair API
-  class Schedule < BaseFetcher
+  class Schedule < Base
     def self.call(code)
       get("https://www.ryanair.com/api/timtbl/3/schedules/#{code}/periods")
     end

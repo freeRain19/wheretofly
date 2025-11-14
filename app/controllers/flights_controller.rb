@@ -10,7 +10,7 @@ class FlightsController < ApplicationController
   # @response 400 Bad Request
   # @response 500 Internal Server Error
   def index
-    @flights = Fetchers::Flight.call(params.fetch(:from).upcase, params.fetch(:to).upcase)
+    @flights = Ryanair::Flight.call(params.fetch(:from).upcase, params.fetch(:to).upcase)
 
     render json: @flights, status: :ok
   end

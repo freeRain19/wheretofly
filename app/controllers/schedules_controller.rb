@@ -5,8 +5,20 @@ class SchedulesController < ApplicationController
   # @param code <String>
   # @response Array<Json>
   def index
-    @schedules = Fetchers::Schedule.call(params.fetch(:code).upcase)
+    verify_params!
+    @schedules = Ryanair::Schedule.call(params.fetch(:code).upcase)
 
     render json: @schedules, status: :ok
+  rescue ParameterMissingError => e
+    puts e.message
+    render json: { error: e.message }, status: :bad_request
+  end
+
+  private
+
+  def verify_params!
+    return if params.fetch(:code, false)
+
+    raise ParameterMissingError.new(:code)
   end
 end

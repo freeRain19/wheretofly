@@ -4,7 +4,7 @@
 class AirportsController < ApplicationController
   # @response Array<Json>
   def index
-    @airports = Fetchers::Airport.call
+    @airports = Ryanair::Airport.call
 
     render json: @airports, status: :ok
   end

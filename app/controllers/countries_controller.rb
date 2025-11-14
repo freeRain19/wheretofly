@@ -4,7 +4,7 @@
 class CountriesController < ApplicationController
   # @response Array<Dto::Country>
   def index
-    @countries = Fetchers::Country.call
+    @countries = Ryanair::Country.call
 
     render json: @countries, status: :ok
   end

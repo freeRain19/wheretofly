@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module Fetchers
+module Ryanair
   # Fetches destination data for a specific airport from Ryanair API
-  class Destination < BaseFetcher
+  class Destination < Base
     def self.call(code, lang = 'en')
       get("https://www.ryanair.com/api/views/locate/searchWidget/routes/#{lang}/airport/#{code}")
     end

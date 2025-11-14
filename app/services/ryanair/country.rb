@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module Fetchers
+module Ryanair
   # Service to fetch country data from Ryanair API
-  class Country < BaseFetcher
+  class Country < Base
     def self.call(lang = 'en')
       get("https://www.ryanair.com/api/views/locate/3/countries/#{lang}")
     end

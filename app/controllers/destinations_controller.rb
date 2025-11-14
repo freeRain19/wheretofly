@@ -6,7 +6,7 @@ class DestinationsController < ApplicationController
   # @response Array<Dto::Country>
   def index
     # binding.pry
-    @destinations = Fetchers::Destination.call(params.fetch(:code).upcase)
+    @destinations = Ryanair::Destination.call(params.fetch(:code).upcase)
 
     render json: @destinations, status: :ok
   end
