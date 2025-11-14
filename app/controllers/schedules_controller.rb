@@ -18,6 +18,6 @@ class SchedulesController < ApplicationController
   def verify_params!
     return if params.fetch(:code, false)
 
-    raise ParameterMissingError.new(:code)
+    raise ParameterMissingError :code
   end
 end

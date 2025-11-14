@@ -2,9 +2,9 @@ name: ci pipeline
 on: [push]
 
 jobs:
-  build-and-run:
+  test:
+    name: Rspec tests
     runs-on: ubuntu-latest
-
     steps:
       - name: Step 1 - Checkout Code
         uses: actions/checkout@v4
@@ -13,9 +13,29 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3.2'
+          bundler-cache: true
 
       - name: Step 3. Install dependencies
         run: bundle install
 
       - name: Step 4 -Run RSpec Tests
         run: bundle exec rspec
+
+  lint:
+    name: Rubocop linter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1 - Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Step 2 - Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3.2'
+          bundler-cache: true
+
+      - name: Step 3. Install dependencies
+        run: bundle install
+
+      - name: Step 4 -Run Rubocop
+        run: bundle exec rubocop --parallel
