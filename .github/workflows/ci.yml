@@ -29,10 +29,9 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3.2'
-          bundler-cache: true
 
-#      - name: Install dependencies (Clean)
-#        run: bundle install
+      - name: Install dependencies (Clean)
+        run: bundle install
 
       - name: Run Rubocop
         run: bundle exec rubocop
