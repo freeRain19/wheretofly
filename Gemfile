@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 source "https://rubygems.org"
 
-gem "rage-rb", "~> 1.16"
+gem "rage-rb", "~> 1.18"
 
 # Build JSON APIs with ease
 # gem "alba"
