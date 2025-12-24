@@ -22,8 +22,37 @@ end
 Dir[File.join(__dir__, '..', 'app', 'adapters', '**', '*.rb')].each { |file| require file }
 Dir[File.join(__dir__, '..', 'app', 'dto', '**', '*.rb')].each { |file| require file }
 require "rage/rspec"
+require 'vcr'
+require 'webmock'
+
+require_relative 'support/vcr'
 
 RSpec.configure do |config|
+  config.around(:each, :vcr) do |example|
+    klass, method = example.metadata[:full_description].split(' ').first.split('#')
+    vcr_meta = example.metadata[:vcr].split('#')
+    klasses = klass.split('::').map do |klass|
+      klass.gsub(/([A-Z])/) { '_' + $1.downcase }.gsub(/^_/, '') # do underscore class name
+    end
+
+    cassette_name = [klasses, method, vcr_meta].flatten.map do |str|
+      str
+        .delete('.')
+        .gsub(/[^[:word:]\-\/]+/, '_')
+        .chomp('/')
+    end.join("/")
+
+    VCR.use_cassette(cassette_name, record: :once) do
+      example.run
+    end
+  end
+  # raise errors if http without VCR
+  config.before(:suite) do
+    VCR.configure do |c|
+      c.allow_http_connections_when_no_cassette = false
+    end
+  end
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

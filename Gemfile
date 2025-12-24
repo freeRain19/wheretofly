@@ -18,10 +18,13 @@ group :development, :test do
 end
 
 group :test do
+  gem 'vcr', '~> 6.3', '>= 6.3.1'
+  gem 'webmock', '~> 3.26', '>= 3.26.1'
   gem 'rspec', '~> 3.13', '>= 3.13.1'
 end
 
 group :development do
   gem 'rubocop', '~> 1.78'
   gem 'rubocop-performance', '~> 1.25'
+  gem 'rubocop-rspec', require: false
 end

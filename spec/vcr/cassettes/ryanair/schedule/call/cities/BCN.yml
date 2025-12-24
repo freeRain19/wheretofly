@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.ryanair.com/api/timtbl/3/schedules/BCN/periods
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 24 Dec 2025 10:19:21 GMT
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      Cache-Control:
+      - max-age=60, s-maxage=300
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 8b6b9c8098dac83ebe6cded46eac0192.cloudfront.net (CloudFront), 1.1 930075038957925711fe5dca561b2c04.cloudfront.net
+        (CloudFront)
+      X-Amz-Cf-Pop:
+      - FRA60-P13
+      - WAW51-P2
+      Vary:
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - G81d377ZZs2QgvcOsEOA8phANyAshiXjpBMJUnKe5CxxjMEcIh-ilA==
+      Age:
+      - '144'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"SCQ":{"firstFlightDate":"2026-03-30","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":7},"RIX":{"firstFlightDate":"2025-12-28","lastFlightDate":"2026-03-26","monthsFromToday":4,"months":3},"BRS":{"firstFlightDate":"2025-12-27","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"MLA":{"firstFlightDate":"2025-12-26","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":10},"BRU":{"firstFlightDate":"2025-12-26","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"MXP":{"firstFlightDate":"2025-12-24","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":11},"PRG":{"firstFlightDate":"2025-12-27","lastFlightDate":"2026-10-23","monthsFromToday":10,"months":10},"AHO":{"firstFlightDate":"2026-03-17","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":8},"EDI":{"firstFlightDate":"2025-12-26","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"STN":{"firstFlightDate":"2025-12-26","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"TNG":{"firstFlightDate":"2025-12-26","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":10},"OPO":{"firstFlightDate":"2025-12-24","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"GDN":{"firstFlightDate":"2025-12-28","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":10},"RBA":{"firstFlightDate":"2025-12-26","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":10},"TRN":{"firstFlightDate":"2025-12-24","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":11},"TRS":{"firstFlightDate":"2025-12-27","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":10},"VNO":{"firstFlightDate":"2025-12-26","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":10},"EMA":{"firstFlightDate":"2026-03-17","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":8},"OUD":{"firstFlightDate":"2025-12-27","lastFlightDate":"2026-10-22","monthsFromToday":10,"months":10},"WMI":{"firstFlightDate":"2025-12-26","lastFlightDate":"2026-10-23","monthsFromToday":10,"months":10},"FCO":{"firstFlightDate":"2025-12-24","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"BGY":{"firstFlightDate":"2025-12-24","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"MAH":{"firstFlightDate":"2026-03-29","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":7},"NCL":{"firstFlightDate":"2025-12-27","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"VCE":{"firstFlightDate":"2025-12-24","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"MAN":{"firstFlightDate":"2025-12-24","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"CRL":{"firstFlightDate":"2025-12-26","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"ARN":{"firstFlightDate":"2025-12-26","lastFlightDate":"2026-10-23","monthsFromToday":10,"months":10},"BTS":{"firstFlightDate":"2025-12-27","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":10},"KRK":{"firstFlightDate":"2025-12-26","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"BLQ":{"firstFlightDate":"2025-12-24","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"LTN":{"firstFlightDate":"2025-12-26","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"LPL":{"firstFlightDate":"2025-12-27","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"ORK":{"firstFlightDate":"2025-12-27","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"OZZ":{"firstFlightDate":"2025-12-26","lastFlightDate":"2026-10-22","monthsFromToday":10,"months":10},"SVQ":{"firstFlightDate":"2025-12-26","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"HHN":{"firstFlightDate":"2025-12-24","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":11},"BUD":{"firstFlightDate":"2025-12-26","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"DUB":{"firstFlightDate":"2025-12-26","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"BHX":{"firstFlightDate":"2025-12-24","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"CFU":{"firstFlightDate":"2026-06-03","lastFlightDate":"2026-09-30","monthsFromToday":10,"months":4},"TLL":{"firstFlightDate":"2025-12-29","lastFlightDate":"2026-10-22","monthsFromToday":10,"months":10},"NDR":{"firstFlightDate":"2025-12-26","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":10},"IBZ":{"firstFlightDate":"2025-12-24","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"AGP":{"firstFlightDate":"2025-12-24","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"CGN":{"firstFlightDate":"2025-12-26","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"SOF":{"firstFlightDate":"2025-12-26","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":10},"BVA":{"firstFlightDate":"2025-12-26","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":10},"PMI":{"firstFlightDate":"2025-12-24","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"BER":{"firstFlightDate":"2025-12-26","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"LUX":{"firstFlightDate":"2025-12-27","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":10},"VIE":{"firstFlightDate":"2025-12-24","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"PMO":{"firstFlightDate":"2025-12-24","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":11},"PIK":{"firstFlightDate":"2026-03-31","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":7},"PEG":{"firstFlightDate":"2026-04-01","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":7},"FAO":{"firstFlightDate":"2026-03-31","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":7},"REG":{"firstFlightDate":"2025-12-28","lastFlightDate":"2026-10-22","monthsFromToday":10,"months":10},"LIS":{"firstFlightDate":"2025-12-26","lastFlightDate":"2026-10-22","monthsFromToday":10,"months":10},"FEZ":{"firstFlightDate":"2025-12-26","lastFlightDate":"2026-10-24","monthsFromToday":11,"months":10},"CPH":{"firstFlightDate":"2025-12-28","lastFlightDate":"2026-10-23","monthsFromToday":10,"months":10},"NAP":{"firstFlightDate":"2025-12-26","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16},"ZAD":{"firstFlightDate":"2026-06-03","lastFlightDate":"2026-08-30","monthsFromToday":9,"months":3},"RAK":{"firstFlightDate":"2025-12-26","lastFlightDate":"2027-03-27","monthsFromToday":16,"months":16}}'
+  recorded_at: Wed, 24 Dec 2025 10:21:45 GMT
+recorded_with: VCR 6.3.1

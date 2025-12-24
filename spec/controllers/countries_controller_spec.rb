@@ -23,9 +23,14 @@ RSpec.describe CountriesController, type: :request do
       end
 
       it 'returns an array of countries' do
-        expect(JSON.parse(response.body)).to be_an_instance_of(Array)
-        expect(JSON.parse(response.body).first['code']).to eq('IE')
-        expect(JSON.parse(response.body).first['name']).to eq('Ireland')
+        expect(json_response).to be_an_instance_of(Array)
+        expect(json_response).not_to be_empty
+      end
+
+      it 'return correct values' do
+        value = json_response.first
+        expect(value[:code]).to eq('IE')
+        expect(value[:name]).to eq('Ireland')
       end
     end
   end

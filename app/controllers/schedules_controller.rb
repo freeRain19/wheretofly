@@ -9,7 +9,7 @@ class SchedulesController < ApplicationController
     @schedules = Ryanair::Schedule.call(params.fetch(:code).upcase)
 
     render json: @schedules, status: :ok
-  rescue ParameterMissingError => e
+  rescue StandardError => e
     render json: { errors: e.message }, status: :bad_request
   end
 
