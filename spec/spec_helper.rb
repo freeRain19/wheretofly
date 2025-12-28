@@ -26,16 +26,23 @@ require 'vcr'
 require 'webmock'
 
 require_relative 'support/vcr'
+require_relative 'support/api_schemas'
+require_relative 'support/custom_matchers'
 
 RSpec.configure do |config|
   config.around(:each, :vcr) do |example|
-    klass, method = example.metadata[:full_description].split(' ').first.split('#')
-    vcr_meta = example.metadata[:vcr].split('#')
-    klasses = klass.split('::').map do |klass|
-      klass.gsub(/([A-Z])/) { '_' + $1.downcase }.gsub(/^_/, '') # do underscore class name
+    path = if example.metadata[:vcr][0] == '#'
+      klass, method = example.metadata[:full_description].split(' ').first.split('#')
+      vcr_meta = example.metadata[:vcr].split('#')[1..]
+      klasses = klass.split('::').map do |klass|
+        klass.gsub(/([A-Z])/) { '_' + $1.downcase }.gsub(/^_/, '') # do underscore class name
+      end
+      [klasses, method, vcr_meta].flatten
+    else
+      example.metadata[:vcr].split('#')
     end
 
-    cassette_name = [klasses, method, vcr_meta].flatten.map do |str|
+    cassette_name = path.map do |str|
       str
         .delete('.')
         .gsub(/[^[:word:]\-\/]+/, '_')
@@ -52,6 +59,8 @@ RSpec.configure do |config|
       c.allow_http_connections_when_no_cassette = false
     end
   end
+
+  # config.include ApiSchemas, type: :request # Will be available only in `it` block, not `let`.
 
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest

@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.ryanair.com/api/views/locate/3/countries/en
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3931'
+      Date:
+      - Wed, 24 Dec 2025 12:26:32 GMT
+      X-Amz-Replication-Status:
+      - COMPLETED
+      Last-Modified:
+      - Thu, 18 Dec 2025 11:46:59 GMT
+      Etag:
+      - '"0ac510104444145567c642c525f6016d"'
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      Cache-Control:
+      - max-age=0, s-maxage=2592000
+      X-Amz-Version-Id:
+      - kXM04KO3QYuk6zsBcHIuhYyVsIK5p27a
+      Accept-Ranges:
+      - bytes
+      Server:
+      - AmazonS3
+      Via:
+      - 1.1 bad86c53165d48d66c80e183f57163d4.cloudfront.net (CloudFront), 1.1 ba172beaa058835048fe52f15497da64.cloudfront.net
+        (CloudFront)
+      X-Amz-Cf-Pop:
+      - FRA60-P13
+      - WAW51-P2
+      Vary:
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - 9I6pAriuhDkV6Ebm3V7Dmfe887AzNqtpHFW9WdKi9tlnAl4cO89AUw==
+      Age:
+      - '332177'
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"code":"dk","iso3code":"DNK","name":"Denmark","currency":"DKK","defaultAirportCode":"BLL","schengen":true},{"code":"gb","iso3code":"GBR","name":"United
+        Kingdom","currency":"GBP","defaultAirportCode":"STN","schengen":false},{"code":"es","iso3code":"ESP","name":"Spain","currency":"EUR","defaultAirportCode":"BCN","schengen":true},{"code":"ma","iso3code":"MAR","name":"Morocco","currency":"MAD","defaultAirportCode":"FEZ","schengen":false},{"code":"it","iso3code":"ITA","name":"Italy","currency":"EUR","defaultAirportCode":"BGY","schengen":true},{"code":"jo","iso3code":"JOR","name":"Jordan","currency":"EUR","defaultAirportCode":"AMM","schengen":false},{"code":"nl","iso3code":"NLD","name":"Netherlands","currency":"EUR","defaultAirportCode":"EIN","schengen":true},{"code":"se","iso3code":"SWE","name":"Sweden","currency":"SEK","defaultAirportCode":"NYO","schengen":true},{"code":"gr","iso3code":"GRC","name":"Greece","currency":"EUR","defaultAirportCode":"ATH","schengen":true},{"code":"ro","iso3code":"ROU","name":"Romania","currency":"EUR","defaultAirportCode":"OTP","schengen":false},{"code":"de","iso3code":"DEU","name":"Germany","currency":"EUR","defaultAirportCode":"HHN","schengen":true},{"code":"fr","iso3code":"FRA","name":"France","currency":"EUR","defaultAirportCode":"BVA","schengen":true},{"code":"tr","iso3code":"TUR","name":"Turkey","currency":"EUR","defaultAirportCode":"DLM","schengen":false},{"code":"ba","iso3code":"BIH","name":"Bosnia
+        & Herzegovina","currency":"EUR","defaultAirportCode":"BNX","schengen":false},{"code":"bg","iso3code":"BGR","name":"Bulgaria","currency":"EUR","defaultAirportCode":"PDV","schengen":false},{"code":"cz","iso3code":"CZE","name":"Czech
+        Republic","currency":"CZK","defaultAirportCode":"PRG","schengen":true},{"code":"be","iso3code":"BEL","name":"Belgium","currency":"EUR","defaultAirportCode":"BRU","schengen":true},{"code":"ch","iso3code":"CHE","name":"Switzerland","currency":"CHF","defaultAirportCode":"BSL","schengen":true},{"code":"sk","iso3code":"SVK","name":"Slovakia","currency":"EUR","defaultAirportCode":"BTS","schengen":true},{"code":"hu","iso3code":"HUN","name":"Hungary","currency":"HUF","defaultAirportCode":"BUD","schengen":true},{"code":"pl","iso3code":"POL","name":"Poland","currency":"PLN","defaultAirportCode":"WMI","schengen":true},{"code":"hr","iso3code":"HRV","name":"Croatia","currency":"EUR","defaultAirportCode":"ZAD","schengen":true},{"code":"ie","iso3code":"IRL","name":"Ireland","currency":"EUR","defaultAirportCode":"DUB","schengen":false},{"code":"pt","iso3code":"PRT","name":"Portugal","currency":"EUR","defaultAirportCode":"LIS","schengen":true},{"code":"fi","iso3code":"FIN","name":"Finland","currency":"EUR","defaultAirportCode":"TMP","schengen":true},{"code":"rs","iso3code":"SRB","name":"Serbia","currency":"EUR","defaultAirportCode":"STN","schengen":false},{"code":"at","iso3code":"AUT","name":"Austria","currency":"EUR","defaultAirportCode":"VIE","schengen":true},{"code":"lt","iso3code":"LTU","name":"Lithuania","currency":"EUR","defaultAirportCode":"KUN","schengen":true},{"code":"cy","iso3code":"CYP","name":"Cyprus","currency":"EUR","defaultAirportCode":"PFO","schengen":false},{"code":"lu","iso3code":"LUX","name":"Luxembourg","currency":"EUR","defaultAirportCode":"STN","schengen":true},{"code":"mt","iso3code":"MLT","name":"Malta","currency":"EUR","defaultAirportCode":"MLA","schengen":true},{"code":"no","iso3code":"NOR","name":"Norway","currency":"NOK","defaultAirportCode":"RYG","schengen":true},{"code":"lv","iso3code":"LVA","name":"Latvia","currency":"EUR","defaultAirportCode":"RIX","schengen":true},{"code":"me","iso3code":"MNE","name":"Montenegro","currency":"EUR","defaultAirportCode":"TGD","schengen":false},{"code":"al","iso3code":"ALB","name":"Albania","currency":"EUR","defaultAirportCode":"STN","schengen":false},{"code":"ee","iso3code":"EST","name":"Estonia","currency":"EUR","defaultAirportCode":"TLL","schengen":true}]'
+  recorded_at: Sun, 28 Dec 2025 08:42:48 GMT
+recorded_with: VCR 6.3.1

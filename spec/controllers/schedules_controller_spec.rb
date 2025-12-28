@@ -25,7 +25,7 @@ RSpec.describe SchedulesController, type: :request do
     context 'without params' do
       let(:params) { {} }
 
-      it 'returns a successful response' do
+      it 'returns a bad request' do
         expect(response).to have_http_status(:bad_request)
       end
 

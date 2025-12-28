@@ -19,7 +19,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 24 Dec 2025 11:31:49 GMT
+      - Sun, 28 Dec 2025 08:42:49 GMT
       Expires:
       - '0'
       X-Frame-Options:
@@ -33,7 +33,7 @@ http_interactions:
       Pragma:
       - no-cache
       Via:
-      - 1.1 bad86c53165d48d66c80e183f57163d4.cloudfront.net (CloudFront), 1.1 68299cdaf53c11b7cef8ab8689128e3a.cloudfront.net
+      - 1.1 9d48d29ac0d6fbcc29cb164716d39d68.cloudfront.net (CloudFront), 1.1 ba172beaa058835048fe52f15497da64.cloudfront.net
         (CloudFront)
       X-Amz-Cf-Pop:
       - FRA60-P13
@@ -45,9 +45,9 @@ http_interactions:
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - rCjBzQzq54Ncfs9DvfRwH12T1JZdm1QQ3XU6Ein8nbw282umqVJO9Q==
+      - f8zQAJPvRhiqUYGg7IvjklmZAC1BMAgKBlXyzqRVAr28oQdqaIaE0w==
     body:
       encoding: ASCII-8BIT
       string: '{"code":"Error","message":"Invalid client request"}'
-  recorded_at: Wed, 24 Dec 2025 11:31:49 GMT
+  recorded_at: Sun, 28 Dec 2025 08:42:49 GMT
 recorded_with: VCR 6.3.1

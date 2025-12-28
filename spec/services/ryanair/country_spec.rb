@@ -3,32 +3,27 @@ require 'spec_helper'
 
 RSpec.describe Ryanair::Country do
   subject(:countries) { described_class.call }
-  let(:api_response) {
-    [{
-       name: 'Ireland',
-       code: 'IE',
-       currency: 'EUR',
-       iso3code: 'IRL',
-       defaultAirportCode: 'DUB',
-       schengen: false
-     }].to_json
-  }
 
-  describe '#call' do
-    before do
-      allow(ApiService).to receive(:get).and_return(api_response)
+  describe '#call', vcr: 'countries' do
+    let(:expected_structure) do
+      {
+        code: a_kind_of(String),
+        iso3code: a_kind_of(String),
+        name: a_kind_of(String),
+        currency: a_kind_of(String),
+        defaultAirportCode: a_kind_of(String),
+        schengen: a_kind_of(TrueClass).or(a_kind_of(FalseClass))
+      }
     end
 
-    it 'returns an array of countries', :aggregate_failures do
+    it 'returns an array of data', :aggregate_failures do
       expect(countries).to be_an_instance_of(Array)
-      expect(countries.size).to eq(1)
-      expect(countries.first).to be_an_instance_of(Hash)
-      expect(countries.first[:name]).to eq('Ireland')
-      expect(countries.first[:code]).to eq('IE')
-      expect(countries.first[:currency]).to eq('EUR')
-      expect(countries.first[:iso3code]).to eq('IRL')
-      expect(countries.first[:defaultAirportCode]).to eq('DUB')
-      expect(countries.first[:schengen]).to be(false)
+      expect(countries).not_to be_empty
+    end
+
+
+    it 'return correct structure' do
+      expect(countries).to all(match(expected_structure))
     end
   end
 end

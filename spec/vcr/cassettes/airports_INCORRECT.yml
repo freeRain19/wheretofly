@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.ryanair.com/api/views/locate/5/airports/INCORRECT/active
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Expect:
+      - ''
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/xml
+      Server:
+      - AmazonS3
+      Date:
+      - Sun, 28 Dec 2025 09:32:50 GMT
+      Via:
+      - 1.1 60b9ab6b887af73f2f2a5d326bb59780.cloudfront.net (CloudFront), 1.1 098d6395a0558ff140166a3bcc78ccbe.cloudfront.net
+        (CloudFront)
+      X-Amz-Cf-Pop:
+      - FRA60-P13
+      - WAW51-P2
+      Vary:
+      - Origin
+      X-Cache:
+      - Error from cloudfront
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - l_fb5DiOqEP3lF_aDAOXKIR2fZL1GOh_ggtnYfGcTAIz3-2iEKF5kQ==
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>views/locate/5/airports/INCORRECT/active</Key><RequestId>3HE313WXG8BM6GWV</RequestId><HostId>9+T4UkXejvl50h1/YkDP7RZnQM9yQY4UWh8+oPsjlJbtWBaed+3FHYiuAkYyBQFaj0qnUa0BO02FfMllsLhbjf4/aG0B9U0e</HostId></Error>
+  recorded_at: Sun, 28 Dec 2025 09:32:51 GMT
+recorded_with: VCR 6.3.1
